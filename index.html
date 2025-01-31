@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Interior Design Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .nav-menu {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .nav-menu {
+        display: flex !important;
+      }
+    }
+    .nav-menu.active {
+      display: block;
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl sm:text-2xl font-bold tracking-tight">
+          <span class="text-black">INTERIOR</span>
+          <span class="text-orange-500">DESIGN</span>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="flex items-center gap-4">
+          <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button class="block md:hidden bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-sm hover:shadow-md">
+            Login
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-menu absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none p-4 md:p-0 md:flex space-y-4 md:space-y-0 md:space-x-8">
+          <a class="block md:inline-block text-orange-500 font-semibold hover:text-orange-600 transition" href="index.html">Home</a>
+          <a class="block md:inline-block text-gray-600 hover:text-gray-900 transition" href="#">Service</a>
+          <a class="block md:inline-block text-gray-600 hover:text-gray-900 transition" href="#">Products</a>
+          <a class="block md:inline-block text-gray-600 hover:text-gray-900 transition" href="#">About us</a>
+          <a class="block md:inline-block text-gray-600 hover:text-gray-900 transition" href="./contact/index.html" target="_blank">Contact us</a>
+        </nav>
+
+        <button class="hidden md:block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium transition duration-300 shadow-sm hover:shadow-md">
+          Login
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container mx-auto px-4 py-12 sm:py-20 text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight max-w-5xl mx-auto">
+      Fit your Home with high end luxury Interior design
+    </h1>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto text-base sm:text-lg px-4">
+      Check out Interior Design's new Best in Design book, featuring unique design stories and projects from some of the most influential design-thinkers.
+    </p>
+    <div class="space-x-2 sm:space-x-4">
+      <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-medium transition duration-300 shadow-sm hover:shadow-md text-sm sm:text-base">
+        Shopping Now
+      </button>
+      <button class="text-orange-500 border-2 border-orange-500 hover:bg-orange-50 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-medium transition duration-300 text-sm sm:text-base">
+        Call us
+      </button>
+    </div>
+    <div class="mt-12 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 lg:gap-12 px-4">
+      <div class="rounded-[2rem] overflow-hidden aspect-square shadow-lg hover-scale">
+        <img alt="A modern interior design with a round table and chairs, plants, and a stylish lamp." 
+             class="w-full h-full object-cover" 
+             src="b32c09072d5fc358ad795d000d743f1d.jpeg"/>
+      </div>
+      <div class="rounded-[2rem] overflow-hidden aspect-square shadow-lg hover-scale">
+        <img alt="A cozy living room with a sofa, plants, and a coffee table." 
+             class="w-full h-full object-cover" 
+             src="5029e1b2fcf40b022acd1faf2273921f.jpeg"/>
+      </div>
+      <div class="rounded-[2rem] overflow-hidden aspect-square shadow-lg hover-scale sm:col-span-2 md:col-span-1">
+        <img alt="A minimalist interior design with a plant and a modern chair." 
+             class="w-full h-full object-cover" 
+             src="ba7e7a57b17d47fbcedf74078a69e43f.jpeg"/>
+      </div>
+    </div>
+  </main>
+
+  <!-- Top Features Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 hover-scale">
+        <i class="fas fa-shipping-fast text-3xl sm:text-4xl text-orange-400 mb-4 sm:mb-6"></i>
+        <p class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Free Shipping</p>
+        <p class="text-gray-500 text-sm sm:text-base">No charge for each delivery</p>
+      </div>
+      <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 hover-scale">
+        <i class="fas fa-credit-card text-3xl sm:text-4xl text-orange-400 mb-4 sm:mb-6"></i>
+        <p class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Quick Payment</p>
+        <p class="text-gray-500 text-sm sm:text-base">100% secure payment</p>
+      </div>
+      <div class="text-center p-6 sm:p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 hover-scale sm:col-span-2 md:col-span-1">
+        <i class="fas fa-headset text-3xl sm:text-4xl text-orange-400 mb-4 sm:mb-6"></i>
+        <p class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">24/7 Support</p>
+        <p class="text-gray-500 text-sm sm:text-base">Quick support</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Grid Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20 bg-white rounded-3xl my-8 sm:my-16">
+    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      <div class="grid grid-cols-2 gap-4 sm:gap-6 w-full lg:w-1/2">
+        <img alt="Modern living room with a yellow chair and a framed picture on the wall" 
+             class="rounded-2xl shadow-lg hover:shadow-xl transition duration-300 hover-scale" 
+             src="s5.jpeg"/>
+        <img alt="Cozy corner with a round chair and a black painting on the wall" 
+             class="rounded-2xl shadow-lg hover:shadow-xl transition duration-300 hover-scale" 
+             src="s6.jpeg"/>
+        <img alt="Minimalist room with a staircase and a green chair" 
+             class="rounded-2xl shadow-lg hover:shadow-xl transition duration-300 hover-scale" 
+             src="s7.jpeg"/>
+        <img alt="Bright hallway with an arch and a black sofa" 
+             class="rounded-2xl shadow-lg hover:shadow-xl transition duration-300 hover-scale" 
+             src="s8.jpeg"/>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+          We Provide You The Best Furnitures
+        </h2>
+        <p class="text-gray-600 mb-8 sm:mb-10 text-base sm:text-lg leading-relaxed">
+          Designers craft spaces that anticipate our needs and appeal to our emotions while pulling from a broad set of skills and technical knowledge. Interior design has changed dramatically
+        </p>
+        <div class="grid grid-cols-3 gap-4 sm:gap-8">
+          <div class="text-center p-4 sm:p-6 bg-orange-50 rounded-2xl">
+            <p class="text-2xl sm:text-3xl font-bold text-orange-500 mb-2">5K+</p>
+            <p class="text-gray-600 text-sm sm:text-base">Products</p>
+          </div>
+          <div class="text-center p-4 sm:p-6 bg-orange-50 rounded-2xl">
+            <p class="text-2xl sm:text-3xl font-bold text-orange-500 mb-2">1000+</p>
+            <p class="text-gray-600 text-sm sm:text-base">Happy customers</p>
+          </div>
+          <div class="text-center p-4 sm:p-6 bg-orange-50 rounded-2xl">
+            <p class="text-2xl sm:text-3xl font-bold text-orange-500 mb-2">65+</p>
+            <p class="text-gray-600 text-sm sm:text-base">Award Winning</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="bg-white py-12 sm:py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-16">Service for your convenience</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-gray-50 p-6 sm:p-10 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 hover-scale">
+          <i class="fas fa-paint-brush text-3xl sm:text-4xl text-orange-400 mb-6 sm:mb-8"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Interior design</h3>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Textiles, materials, color, space planning, sustainability, and more</p>
+        </div>
+        <div class="bg-gray-50 p-6 sm:p-10 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 hover-scale">
+          <i class="fas fa-couch text-3xl sm:text-4xl text-orange-400 mb-6 sm:mb-8"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Furnitures</h3>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Software applications for 2D & 3D computer-aided design (CAD) and building information modeling (BIM)</p>
+        </div>
+        <div class="bg-gray-50 p-6 sm:p-10 rounded-3xl shadow-lg hover:shadow-xl transition duration-300 hover-scale sm:col-span-2 md:col-span-1">
+          <i class="fas fa-truck text-3xl sm:text-4xl text-orange-400 mb-6 sm:mb-8"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Free Delivery</h3>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">Structural requirements, health and safety issues, and building codes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-16">Shop from category</h2>
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-16">
+      <button class="bg-orange-500 text-white px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-orange-600 transition duration-300 shadow-sm hover:shadow-md text-sm sm:text-base">
+        All Furnitures
+      </button>
+      <button class="bg-gray-100 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-gray-200 transition duration-300 text-sm sm:text-base">
+        Bed Room
+      </button>
+      <button class="bg-gray-100 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-gray-200 transition duration-300 text-sm sm:text-base">
+        Living Room
+      </button>
+      <button class="bg-gray-100 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-gray-200 transition duration-300 text-sm sm:text-base">
+        Dining
+      </button>
+      <button class="bg-gray-100 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-gray-200 transition duration-300 text-sm sm:text-base">
+        Home Office
+      </button>
+      <button class="bg-gray-100 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full hover:bg-gray-200 transition duration-300 text-sm sm:text-base">
+        More
+      </button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 hover-scale">
+        <img alt="Living room coach" 
+             class="w-full h-48 sm:h-64 object-cover" 
+             src="71f1e78d40104079217ebb28362221ed.jpeg"/>
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Living room coach</h3>
+          <p class="text-orange-500 font-bold text-base sm:text-lg">$100.00</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 hover-scale">
+        <img alt="Living room coach" 
+             class="w-full h-48 sm:h-64 object-cover" 
+             src="e1584cd6f7cc77cfbc0de59b83416201.jpeg"/>
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Living room coach</h3>
+          <p class="text-orange-500 font-bold text-base sm:text-lg">$100.00</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 hover-scale">
+        <img alt="Living room coach" 
+             class="w-full h-48 sm:h-64 object-cover" 
+             src="24991b8cf8c68f44107aa91a0d402520.jpeg"/>
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Living room coach</h3>
+          <p class="text-orange-500 font-bold text-base sm:text-lg">$100.00</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 hover-scale">
+        <img alt="Living room coach" 
+             class="w-full h-48 sm:h-64 object-cover" 
+             src="a17be9e373ccaff91e465e5ec14da0c6.jpeg"/>
+        <div class="p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Living room coach</h3>
+          <p class="text-orange-500 font-bold text-base sm:text-lg">$100.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Product Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20 bg-white rounded-3xl my-8 sm:my-16">
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Organic Living room Coach</h2>
+        <p class="text-gray-600 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+          Today, Interior designers work with contractors, architects, engineers, craftsmen, 
+          furniture dealers, and business and home owners to become a successful interior designer.
+        </p>
+        <p class="text-3xl sm:text-4xl font-bold text-orange-500 mb-4 sm:mb-6">$105.99</p>
+        <p class="text-gray-600 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+          you need a well-rounded education and the skills to work within many
+        </p>
+        <div class="flex items-center mb-6 sm:mb-8">
+          <div class="flex text-yellow-400 mr-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-gray-600 text-sm sm:text-base">4.9 rating (100 reviews)</p>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <img alt="A cozy living room with a brown sofa, white pillows, and a floor lamp" 
+             class="rounded-3xl shadow-lg hover-scale"
+             src="f85a44bf46c9d01cc222ccef2c3659f1.jpeg" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20">
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+      <div class="md:w-1/2">
+        <img alt="A modern living room with a gray armchair, wooden sideboard, and plants" 
+             class="rounded-3xl shadow-lg hover-scale"
+             src="3bf49d077218406fc0998cef0b560059.jpeg" />
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Why Choose Interio</h2>
+        <p class="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed">
+          With its strong professional focus, a New York School of Interior Design education 
+          gives you access to internships.
+        </p>
+        <div class="space-y-6 sm:space-y-10">
+          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">1. High Quality Home Furnitures</h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Complete your living space with designing using our best designers and products
+            </p>
+          </div>
+          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">2. Unique Designs</h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Explore design ideas that can create your dream home with our experienced designers
+            </p>
+          </div>
+          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">3. Lowest Price List</h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Get beautiful interiors at a price you can afford. Just 45 days and there is no contractor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Opinions Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20 bg-white rounded-3xl my-8 sm:my-16">
+    <div class="text-center mb-8 sm:mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Customer Opinions</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg px-4">
+        Customer evaluations are what matters most to us, so we prefer when requesting any service through us to send a message to customers to make an evaluation of our services
+      </p>
+    </div>
+    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+      <img alt="Customer photo of a man wearing glasses and a black hoodie, smiling in an outdoor setting" 
+           class="w-full md:w-1/2 rounded-3xl shadow-lg hover-scale" 
+           src="68b12ef0cae120e61834642304c5e605.jpeg"/>
+      <div class="md:w-1/2">
+        <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Mohammed Ali</h3>
+        <div class="flex text-yellow-400 mb-4 sm:mb-6">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star text-gray-300"></i>
+        </div>
+        <p class="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis tortor diam quam eget nunc. Vivamus tincidunt magna nisl.</p>
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis tortor diam quam eget nunc. Vivamus tincidunt magna nisl.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Discount Section -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="bg-gradient-to-r from-green-600 to-green-500 text-white rounded-3xl p-8 sm:p-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Grab Your 20% Discount</h2>
+      <p class="mb-6 sm:mb-8 max-w-2xl mx-auto text-base sm:text-lg opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis tortor diam quam eget nunc. Vivamus tincidunt magna nisl.</p>
+      <button class="bg-white text-green-600 font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full hover:bg-green-50 transition duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+        Shopping Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Trusted Companies Section -->
+  <div class="container mx-auto px-4 py-12 sm:py-20">
+    <p class="text-gray-600 text-center mb-8 sm:mb-12 text-base sm:text-lg">Over 32+ companies Trusted on us</p>
+    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+      <img alt="Company logo 1" class="h-12 sm:h-16 opacity-70 hover:opacity-100 transition duration-300" src="s1.png"/>
+      <img alt="Company logo 2" class="h-12 sm:h-16 opacity-70 hover:opacity-100 transition duration-300" src="s2.png"/>
+      <img alt="Company logo 3" class="h-12 sm:h-16 opacity-70 hover:opacity-100 transition duration-300" src="s3.png"/>
+      <img alt="Company logo 4" class="h-12 sm:h-16 opacity-70 hover:opacity-100 transition duration-300" src="s4.png"/>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-white pt-12 sm:pt-20 pb-8 sm:pb-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-16 mb-8 sm:mb-16">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">INTERIOR DESIGN</h2>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">1702 20th Street<br/>New York, NY 10021</p>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Quick Links</h3>
+          <ul class="space-y-3 sm:space-y-4">
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Products</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Services</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Purchase</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">The Company</h3>
+          <ul class="space-y-3 sm:space-y-4">
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">About</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Our contact </a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Resources</h3>
+          <ul class="space-y-3 sm:space-y-4">
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Online Payment</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Privacy Policy</a></li>
+            <li><a class="text-gray-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base" href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-100 pt-8 sm:pt-10">
+        <form class="max-w-md mx-auto mb-8 sm:mb-12">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-0">
+            <input 
+              type="email" 
+              placeholder="your@example.com" 
+              class="w-full sm:flex-1 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full sm:rounded-r-none border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <button class="w-full sm:w-auto bg-orange-500 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full sm:rounded-l-none hover:bg-orange-600 transition duration-300 font-medium text-sm sm:text-base">
+              SUBSCRIBE
+            </button>
+          </div>
+        </form>
+
+        <div class="text-center">
+          <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">© 2023 INTERIOR DESIGN. All rights reserved.</p>
+          <div class="flex justify-center space-x-6 sm:space-x-8">
+            <a class="text-gray-400 hover:text-orange-500 transition duration-300 text-lg sm:text-xl" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-gray-400 hover:text-orange-500 transition duration-300 text-lg sm:text-xl" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-gray-400 hover:text-orange-500 transition duration-300 text-lg sm:text-xl" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
